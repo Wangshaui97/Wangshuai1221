@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.HomeActivity">
+    <TextView
+        android:id="@+id/zxing"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="【-】扫一扫"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+    <EditText
+        android:id="@+id/putin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/zxing"
+        app:layout_constraintRight_toLeftOf="@id/sousuo"
+        />
+
+    <ImageView
+        android:id="@+id/sousuo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/sousuo"
+        app:layout_constraintRight_toLeftOf="@id/qiehuan"
+        />
+    <ImageView
+        android:id="@+id/qiehuan"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:src="@drawable/qiehuan"
+        />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/hand"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintTop_toBottomOf="@id/sousuo"
+        >
+    </android.support.v7.widget.RecyclerView>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/hand"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="#fff"
+        >
+    </android.support.v7.widget.RecyclerView>
+
+</android.support.constraint.ConstraintLayout>
